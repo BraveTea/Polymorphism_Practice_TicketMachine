@@ -15,12 +15,7 @@ public class TicketMachine {
     }
 
     public boolean paidEnough(TicketBase ticket, double amountPaid){
-        if (amountPaid >= ticket.price){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return amountPaid >= ticket.price;
     }
 
     public double moneyLeftToPay(TicketBase ticket, double amountPaid){
@@ -31,3 +26,4 @@ public class TicketMachine {
         System.out.printf("You had to pay %.2f more. Try Again.%n", moneyLeftToPay(ticket, amountPaid));
     }
 }
+
